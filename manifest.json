@@ -1,0 +1,17 @@
+{
+  "name": "SVG Viewer",
+  "version": "1.4",
+  "description": "Adds d3.js pan & zoom to SVG documents opened from file:// or http(s)://.",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["file://*/*.svg", "*://*/*.svg"],
+      "js": ["js/d3.min.js","content.js"]
+    }
+  ]
+}
